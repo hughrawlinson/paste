@@ -2,7 +2,7 @@ import * as React from 'react';
 import {useReducedMotion, Globals as AnimatedGlobals} from '@twilio-paste/animation-library';
 import {styled, StylingGlobals, ThemeProvider as StyledThemeProvider} from '@twilio-paste/styling-library';
 
-import {DefaultTheme, SendGridTheme, DarkTheme} from './themes';
+import {DefaultTheme, SendGridTheme, EvergreenTheme, DarkTheme} from './themes';
 import {pasteGlobalStyles} from './styles/global';
 import {pasteBaseStyles} from './styles/base';
 import {pasteFonts} from './styles/fonts';
@@ -22,6 +22,11 @@ function getProviderThemeProps(theme: ThemeVariants | DeprecatedThemeVariants, c
     case ThemeVariants.SENDGRID:
       return {
         ...SendGridTheme,
+        breakpoints: customBreakpoints || SendGridTheme.breakpoints,
+      };
+    case ThemeVariants.EVERGREEN:
+      return {
+        ...EvergreenTheme,
         breakpoints: customBreakpoints || SendGridTheme.breakpoints,
       };
     case DeprecatedThemeVariants.CONSOLE:

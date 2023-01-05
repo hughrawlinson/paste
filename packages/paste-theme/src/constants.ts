@@ -5,6 +5,7 @@ export const ThemeVariants = {
   SENDGRID: 'sendgrid',
   FLEX: 'flex',
   DARK: 'dark',
+  EVERGREEN: 'evergreen',
 };
 
 export const DeprecatedThemeVariants = {
