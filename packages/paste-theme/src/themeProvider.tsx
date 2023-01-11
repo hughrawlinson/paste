@@ -27,7 +27,7 @@ function getProviderThemeProps(theme: ThemeVariants | DeprecatedThemeVariants, c
     case ThemeVariants.EVERGREEN:
       return {
         ...EvergreenTheme,
-        breakpoints: customBreakpoints || SendGridTheme.breakpoints,
+        breakpoints: customBreakpoints || EvergreenTheme.breakpoints,
       };
     case DeprecatedThemeVariants.CONSOLE:
       isDeprecatedTheme(DeprecatedThemeVariants.CONSOLE);
