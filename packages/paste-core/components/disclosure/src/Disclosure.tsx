@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {useDisclosurePrimitiveState} from '@twilio-paste/disclosure-primitive';
 import {Box, safelySpreadBoxProps} from '@twilio-paste/box';
-import {Card} from '@twilio-paste/card';
 
 import {DisclosureContext} from './DisclosureContext';
 import type {DisclosureProps} from './types';
@@ -14,16 +13,6 @@ const Disclosure = React.forwardRef<HTMLDivElement, DisclosureProps>(
       disclosure,
       variant,
     };
-
-    if (variant === 'contained') {
-      return (
-        <DisclosureContext.Provider value={disclosureContext}>
-          <Card {...props} variant={variant} element={element} padding="space0" ref={ref}>
-            {children}
-          </Card>
-        </DisclosureContext.Provider>
-      );
-    }
 
     return (
       <DisclosureContext.Provider value={disclosureContext}>

@@ -3,7 +3,7 @@ import {useTheme} from '@twilio-paste/theme';
 import type {BorderRadius} from '@twilio-paste/style-props';
 import {Box, safelySpreadBoxProps} from '@twilio-paste/box';
 import {Heading, HeadingPropTypes} from '@twilio-paste/heading';
-import {ChevronDisclosureExpandedIcon} from '@twilio-paste/icons/esm/ChevronDisclosureExpandedIcon';
+import {ChevronRightIcon} from '@twilio-paste/icons/esm/ChevronRightIcon';
 import {DisclosurePrimitive} from '@twilio-paste/disclosure-primitive';
 
 import {DisclosureContext} from './DisclosureContext';
@@ -19,12 +19,12 @@ const StyledDisclosureHeading = React.forwardRef<HTMLDivElement, StyledDisclosur
     const theme = useTheme();
     const hoverRef = React.useRef(null);
     const isHovered = useHover(hoverRef);
+    const isDisabled = props['aria-disabled'];
+    const isExpanded = props['aria-expanded'];
+    const iconSize = IconSizeFromHeading[variant] || 'sizeIcon20';
 
-    let bottomBorderRadius = 'borderRadius20' as BorderRadius;
-    if (disclosureVariant === 'contained') {
-      bottomBorderRadius = 'borderRadius10';
-    }
-    if (disclosureVariant === 'contained' && props['aria-expanded']) {
+    let bottomBorderRadius: BorderRadius = 'borderRadius20';
+    if (disclosureVariant === 'contained' && isExpanded) {
       bottomBorderRadius = 'borderRadius0';
     }
 
@@ -33,8 +33,8 @@ const StyledDisclosureHeading = React.forwardRef<HTMLDivElement, StyledDisclosur
         <Box
           {...safelySpreadBoxProps(props)}
           as="div"
-          backgroundColor={props['aria-expanded'] ? 'colorBackground' : 'colorBackgroundBody'}
-          borderRadius={disclosureVariant === 'contained' ? 'borderRadius10' : 'borderRadius20'}
+          backgroundColor={isExpanded ? 'colorBackgroundWeak' : 'colorBackgroundBody'}
+          borderRadius="borderRadius20"
           borderBottomLeftRadius={bottomBorderRadius}
           borderBottomRightRadius={bottomBorderRadius}
           cursor="pointer"
@@ -48,14 +48,14 @@ const StyledDisclosureHeading = React.forwardRef<HTMLDivElement, StyledDisclosur
           zIndex="zIndex10"
           transition="background-color 100ms ease-out"
           _hover={{
-            backgroundColor: 'colorBackgroundStrong',
+            backgroundColor: 'colorBackground',
           }}
           _focus={{
             boxShadow: 'shadowFocus',
           }}
           _disabled={{
-            backgroundColor: props['aria-expanded'] ? 'colorBackground' : 'colorBackgroundBody',
-            color: 'colorTextWeak',
+            backgroundColor: 'colorBackgroundStrong',
+            color: 'colorTextWeaker',
             cursor: 'not-allowed',
           }}
         >
@@ -63,15 +63,13 @@ const StyledDisclosureHeading = React.forwardRef<HTMLDivElement, StyledDisclosur
             as="span"
             element={`${element}_ICON`}
             display="flex"
-            height={IconSizeFromHeading[variant] || 'sizeIcon20'}
-            width={IconSizeFromHeading[variant] || 'sizeIcon20'}
-            {...getIconHoverStyles(isHovered, variant, props[`aria-expanded`], props[`aria-disabled`], theme.space)}
+            color={isDisabled ? 'colorTextWeaker' : 'colorTextIcon'}
+            transition="transform 200ms ease-out"
+            height={iconSize}
+            width={iconSize}
+            {...getIconHoverStyles(isHovered, isExpanded, isDisabled, theme.space)}
           >
-            <ChevronDisclosureExpandedIcon
-              color="inherit"
-              decorative
-              size={IconSizeFromHeading[variant] || 'sizeIcon20'}
-            />
+            <ChevronRightIcon color="inherit" decorative size={iconSize} />
           </Box>
           {children}
         </Box>
