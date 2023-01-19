@@ -12376,7 +12376,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@twilio-paste/card@^6.0.2, @twilio-paste/card@workspace:packages/paste-core/components/card":
+"@twilio-paste/card@^6.0.2, @twilio-paste/card@^6.0.3, @twilio-paste/card@workspace:packages/paste-core/components/card":
   version: 0.0.0-use.local
   resolution: "@twilio-paste/card@workspace:packages/paste-core/components/card"
   dependencies:
@@ -12634,7 +12634,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@twilio-paste/combobox@^13.0.2, @twilio-paste/combobox@workspace:packages/paste-core/components/combobox":
+"@twilio-paste/combobox@^13.0.2, @twilio-paste/combobox@^13.0.3, @twilio-paste/combobox@workspace:packages/paste-core/components/combobox":
   version: 0.0.0-use.local
   resolution: "@twilio-paste/combobox@workspace:packages/paste-core/components/combobox"
   dependencies:
@@ -12715,14 +12715,14 @@ __metadata:
     "@twilio-paste/button": ^11.1.6
     "@twilio-paste/button-group": ^1.0.2
     "@twilio-paste/callout": ^1.0.2
-    "@twilio-paste/card": ^6.0.2
+    "@twilio-paste/card": ^6.0.3
     "@twilio-paste/chat-composer": ^1.0.2
     "@twilio-paste/chat-log": ^2.1.2
     "@twilio-paste/checkbox": ^10.0.4
     "@twilio-paste/clipboard-copy-library": ^1.0.4
     "@twilio-paste/code-block": ^1.1.2
     "@twilio-paste/color-contrast-utils": ^3.0.1
-    "@twilio-paste/combobox": ^13.0.2
+    "@twilio-paste/combobox": ^13.0.3
     "@twilio-paste/combobox-primitive": ^0.3.6
     "@twilio-paste/customization": ^5.0.2
     "@twilio-paste/data-grid": ^5.0.2
@@ -12771,7 +12771,7 @@ __metadata:
     "@twilio-paste/select": ^9.1.2
     "@twilio-paste/separator": ^5.0.2
     "@twilio-paste/sibling-box": ^6.0.3
-    "@twilio-paste/side-modal": ^1.0.3
+    "@twilio-paste/side-modal": ^1.0.4
     "@twilio-paste/skeleton-loader": ^3.0.2
     "@twilio-paste/spinner": ^11.0.2
     "@twilio-paste/stack": ^5.0.2
@@ -14212,7 +14212,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@twilio-paste/side-modal@^1.0.3, @twilio-paste/side-modal@workspace:packages/paste-core/components/side-modal":
+"@twilio-paste/side-modal@^1.0.3, @twilio-paste/side-modal@^1.0.4, @twilio-paste/side-modal@workspace:packages/paste-core/components/side-modal":
   version: 0.0.0-use.local
   resolution: "@twilio-paste/side-modal@workspace:packages/paste-core/components/side-modal"
   dependencies:

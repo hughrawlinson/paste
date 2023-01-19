@@ -1,6 +1,6 @@
 {
   "name": "@twilio-paste/card",
-  "version": "6.0.2",
+  "version": "6.0.3",
   "category": "data display",
   "status": "production",
   "description": "A Card is a styled container that groups related content and actions.",

@@ -1,6 +1,6 @@
 {
   "name": "@twilio-paste/side-modal",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "category": "overlays",
   "status": "production",
   "description": "A modal that stays on the side of the screen.",

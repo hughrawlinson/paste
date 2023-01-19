@@ -1,5 +1,20 @@
 # Change Log
 
+## 17.4.1
+
+### Patch Changes
+
+- [`2fe476a71`](https://github.com/twilio-labs/paste/commit/2fe476a71f73f96e69d2a2b6b451e98b0799d9a1) [#2949](https://github.com/twilio-labs/paste/pull/2949) Thanks [@shleewhite](https://github.com/shleewhite)! - [Combobox] Render the listbox in a portal to fix a bug where the contents of the listbox are cut off when it placed inside a scrolling container. Adds a new dependency on @radix-ui/react-use-rect.
+
+* [`353b8323a`](https://github.com/twilio-labs/paste/commit/353b8323a1a1ab293d35d3bcabf3ed3793bbe1b2) [#2938](https://github.com/twilio-labs/paste/pull/2938) Thanks [@nkrantz](https://github.com/nkrantz)! - [Card] Update styles to align with new Paste Twilio theme
+
+- [`353b8323a`](https://github.com/twilio-labs/paste/commit/353b8323a1a1ab293d35d3bcabf3ed3793bbe1b2) [#2938](https://github.com/twilio-labs/paste/pull/2938) Thanks [@nkrantz](https://github.com/nkrantz)! - [Side Modal] Update styles to align with new Paste Twilio theme
+
+- Updated dependencies [[`2fe476a71`](https://github.com/twilio-labs/paste/commit/2fe476a71f73f96e69d2a2b6b451e98b0799d9a1), [`353b8323a`](https://github.com/twilio-labs/paste/commit/353b8323a1a1ab293d35d3bcabf3ed3793bbe1b2), [`353b8323a`](https://github.com/twilio-labs/paste/commit/353b8323a1a1ab293d35d3bcabf3ed3793bbe1b2)]:
+  - @twilio-paste/combobox@13.0.3
+  - @twilio-paste/card@6.0.3
+  - @twilio-paste/side-modal@1.0.4
+
 ## 17.4.0
 
 ### Minor Changes
