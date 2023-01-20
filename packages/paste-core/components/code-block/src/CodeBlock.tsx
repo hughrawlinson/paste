@@ -133,7 +133,7 @@ CodeBlock.propTypes = {
     'json',
     'c',
     'bash',
-    'shell-session',
+    'shell',
     'go',
     'groovy',
   ] as SnippetLanguages[]).isRequired,
